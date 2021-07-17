@@ -4,3 +4,4 @@ def write():
     systemInfo_file.write("\nTEST DATA2")
 
     systemInfo_file.close()
+

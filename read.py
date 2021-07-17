@@ -1,16 +1,22 @@
+import psutil
+import platform
+
+
 def read():
-    systemInfo_file = open("readTest.txt", "r")
+    extracted_txt = {}
 
-    for systemInfo in systemInfo_file.readlines():
-        print(systemInfo)
+    with open("readTest.txt", "r") as systemInfo:
+        for line in systemInfo:
+            content = line.split(" ")
 
-    systemInfo_file.close()
+            item = content[0]
+            value = content[1]
 
+            extracted_txt[item] = value
 
+        print(extracted_txt)
 
-
-
-
+    systemInfo.close()
 
 
 
