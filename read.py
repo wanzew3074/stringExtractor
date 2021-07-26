@@ -1,6 +1,10 @@
 import psutil
 import platform
-from datetime import datetime
+import os
+
+
+# Fetch username and insert it to the file path via f-string
+sys_info_output_filepath: str = f"C:\\Users\\{os.getlogin()}\\Desktop\\sys_info_output.txt"
 
 
 def get_size(bytes, suffix="B"):
@@ -34,7 +38,7 @@ def read_from_txt():
     systemInfo.close()
 
 
-with open("sys_info_output.txt", "a") as f:
+with open(sys_info_output_filepath, "a") as f:
     """
     print("Hello stackoverflow!", file=f)
     print("I have a question.", file=f)
@@ -79,8 +83,3 @@ with open("sys_info_output.txt", "a") as f:
             # isn't ready
             continue
         print(f"  Total Size: {get_size(partition_usage.total)}", file=f)
-
-
-
-
-
