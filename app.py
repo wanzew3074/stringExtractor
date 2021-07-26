@@ -2,6 +2,8 @@ from read import *
 from write import *
 from setup import *
 
+package = "psutil"
+
 
 def main():
     print("Please select operation -\n" \
@@ -18,7 +20,7 @@ def main():
         write()
 
     elif select == 3:
-        setup()
+        install(package)
 
     else:
         print("Invalid input")
