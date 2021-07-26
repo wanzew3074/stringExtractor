@@ -1,2 +1,2 @@
-# stringextractor
-extract string from text file
+# systemInfoExtractor
+extract system info and write the value into text file
