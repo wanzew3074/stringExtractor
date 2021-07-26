@@ -14,7 +14,7 @@ def main():
     select = int(input("Select operations form 1,2,3: "))
 
     if select == 1:
-        read()
+        read_from_txt()
 
     elif select == 2:
         write()
